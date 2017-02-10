@@ -83,6 +83,9 @@ public class HW21 {
             }
             i++;
         }
+        if (max==0){
+           return -1;
+        }
         return max;
     }
 
@@ -97,6 +100,9 @@ public class HW21 {
                 max=array[i];
             }
             i++;
+        }
+        if (max==0){
+            return -1;
         }
         return max;
     }
@@ -139,15 +145,8 @@ public class HW21 {
 
     static int secondLargest(int array[]){
         int max1,max2;
-        if (array[0]>array[1]) {
-            max1=array[0];
-            max2=array[1];
-        }
-        else
-        {
-            max1=array[1];
-            max2=array[0];
-        }
+        max1=max(array);
+        max2=array[0];
         int i=2;
         while (i<array.length){
             if (array[i]<max1 && array[i]>max2){
@@ -156,7 +155,6 @@ public class HW21 {
             else{
                 if (array[i]>max1){
                     max2=max1;
-                    max1=array[i];
                 }
             }
             i++;
@@ -166,15 +164,8 @@ public class HW21 {
 
     static double secondLargest(double array[]){
         double max1,max2;
-        if (array[0]>array[1]) {
-            max1=array[0];
-            max2=array[1];
-        }
-        else
-        {
-            max1=array[1];
-            max2=array[0];
-        }
+        max1=max(array);
+        max2=array[0];
         int i=2;
         while (i<array.length){
             if (array[i]<max1 && array[i]>max2){
@@ -192,7 +183,33 @@ public class HW21 {
     }
 
     public static void main(String[] args) {
-        int []arInt={21, 42, -7, 32, 0, 8, -5, -3, 24, 11};
-        double []arDouble={13.65,-1.24,17.48,-15.45,2.49,141.66,5.78,0.02,101.4,-77.00};
+        int []arInt={21, 42, -7, 32, 1, 8, -5, -3, 24, 10};
+        double []arDouble={13.65,-1.24,17.48,-15.45,2.49,141.66,5.78,0.02,101.4,10.00};
+        System.out.println("Sum array int :"+sum(arInt));
+        System.out.println("Sum array double :"+sum(arDouble));
+        System.out.println("Min array int :"+min(arInt));
+        System.out.println("Min array double : "+min(arDouble));
+        System.out.println("Max array int : "+max(arInt));
+        System.out.println("Max array double : "+max(arDouble));
+        int res=maxPositive(arInt);
+        if (res==-1){
+            System.out.println("Array haven't max posistive!");
+        }
+        else{
+            System.out.println("Max positive array int :"+res);
+        }
+        double resD=maxPositive(arDouble);
+        if (resD==-1){
+            System.out.println("Array haven't max posistive!");
+        }
+        else{
+            System.out.println("Max positive array double :"+resD);
+        }
+        System.out.println("Multiplication array int : "+multiplication(arInt));
+        System.out.println("Multiplication array double : "+multiplication(arDouble));
+        System.out.println("Modulus array int : "+modulus(arInt));
+        System.out.println("Modulus array double : "+modulus(arDouble));
+        System.out.println("Second largest array int : "+secondLargest(arInt));
+        System.out.println("Second largest array int : "+secondLargest(arDouble));
     }
 }
