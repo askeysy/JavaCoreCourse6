@@ -2,9 +2,7 @@ package HW3;
 
 public class Arithmetic {
     static int add(Integer a, Integer b){
-        int sum;
-        sum=a+b;
-        return sum;
+        return a+b;
     }
 
     public static void main(String[] args) {
