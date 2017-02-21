@@ -75,7 +75,12 @@ public class User {
             percent=summ*5/100;
         }
         else percent = summ * 10 / 100;
-        balance-=percent;
+        if (summ+percent>balance){
+            System.out.println("Error! Balanse less 0");
+        }
+        else {
+            balance-=percent;
+        }
     }
     void companyNameLenght(){
         User Worker=new User("Worker",15000,5,"IKEA",1000,"EUR");
@@ -87,9 +92,5 @@ public class User {
         Worker.setMonthsOfEmployment(month+addMonth);
     }
 
-    public static void main(String[] args) {
-        User user=new User("1",5000,5,"ss",2540,"USD");
-        System.out.println(user.getSalary());
-    }
 }
 
