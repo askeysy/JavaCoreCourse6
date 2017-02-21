@@ -66,19 +66,16 @@ public class User {
     }
 
     void paySalary(){
-        User Worker=new User("Worker",15000,5,"IKEA",1000,"EUR");
-        Worker.setBalance(Worker.getBalance()+Worker.getSalary());
+        balance+=salary;
     }
 
     void withdraw(int summ){
-        User Worker=new User("Worker",15000,5,"IKEA",1000,"EUR");
-        int balance=Worker.getBalance();
         int percent;
         if (summ<1000){
             percent=summ*5/100;
         }
         else percent = summ * 10 / 100;
-        Worker.setBalance(balance-percent);
+        balance-=percent;
     }
     void companyNameLenght(){
         User Worker=new User("Worker",15000,5,"IKEA",1000,"EUR");
@@ -90,4 +87,9 @@ public class User {
         Worker.setMonthsOfEmployment(month+addMonth);
     }
 
+    public static void main(String[] args) {
+        User user=new User("1",5000,5,"ss",2540,"USD");
+        System.out.println(user.getSalary());
+    }
 }
+

@@ -8,7 +8,7 @@ public class SpecialStudent extends CollegeStudent{
     }
 
     public SpecialStudent(String lastName, String coursesTaken) {
-        super(lastName, coursesTaken);
+        super("", null);
     }
 
     public SpecialStudent(long secretKey, String email) {
