@@ -19,7 +19,12 @@ public class Solution {
         courseTaken[3]=Course4;
         courseTaken[4]=Course5;
 
-        CollegeStudent Ivanov=new CollegeStudent("Ivan","Ivanov",3,Course1.getName(),5,13);
+        CollegeStudent collegePetrov=new CollegeStudent("Andriy","Petrov",3);
+        collegePetrov.setAge(19);
+        collegePetrov.setId(23);
+        collegePetrov.setRating(5);
+
+        CollegeStudent Ivanov=new CollegeStudent(Course1.getName(),5,13);
         Ivanov.setCollegeName("GoIT");
         String collegenameIvanov=Ivanov.getCollegeName();
         Ivanov.setRating(5);
@@ -38,14 +43,20 @@ public class Solution {
         Antonov.setFirstName("Anton");
         long idAntonov=Antonov.getId();
 
-        SpecialStudent Spec=new SpecialStudent("Ivan","Ivanov",3,548455,"IvanIvanov@gmail.com");
+
+        SpecialStudent Spec=new SpecialStudent(548455,"IvanIvanov@gmail.com");
         String email=Spec.getEmail();
         long secretKey=Spec.getSecretKey();
 
-        SpecialStudent NewStudent=new SpecialStudent("Petrov",courseTaken,74851296,"petrov@i.ua");
-        NewStudent.setId(5);
-        NewStudent.setAge(17);
-        long idNewStudent=NewStudent.getId();
+        SpecialStudent specStudent=new SpecialStudent(5522554,"spec@goit.com");
+        specStudent.setRating(15);
+        int ratingSpec=specStudent.getRating();
+        String emailSpec=specStudent.getEmail();
+
+        SpecialStudent superStudent=new SpecialStudent("Einstein",Course1.getName());
+        superStudent.setId(100);
+        String lastName=superStudent.getLastName();
+        Course course[]=superStudent.getCoursesTaken();
 
         Student Petrov=new Student("Stepan","Petrov",2);
         Petrov.setCoursesTaken(courseTaken);
@@ -61,6 +72,6 @@ public class Solution {
 
         Student Good=new Student("Good",courseTaken);
         Good.setAge(19);
-        String lastName=Good.getLastName();
+        String lastNameStudent=Good.getLastName();
     }
 }
