@@ -76,7 +76,7 @@ public class User {
         }
         else percent = summ * 10 / 100;
         if (summ+percent>balance){
-            System.out.println("Error! Balanse less 0");
+            System.out.println("Error! Balance less 0");
         }
         else {
             balance-=percent;
