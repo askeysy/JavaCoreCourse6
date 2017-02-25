@@ -5,7 +5,7 @@ public class HW22 {
         double percent=0.05;
         double commision,rest;
         if (balance<0 || withdrawal<0){
-            return "Balance or withdraw less null!";
+            return "Balance or withdraw less 0!";
         }
         commision=percent*withdrawal;
         rest=balance-commision;

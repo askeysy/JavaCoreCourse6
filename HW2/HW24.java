@@ -11,7 +11,7 @@ public class HW24 {
         int i=0;
         int isElement=0;
         if (fund<0){
-            return "Fund less null!";
+            return "Fund less 0!";
         }
         while (i<ownerNames.length){
             if (ownerNames[i].equals(ownerName)){

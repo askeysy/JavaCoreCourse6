@@ -32,7 +32,7 @@ public class HW23 {
     static String withdrawBalance(String ownerName,double withdrawal){
         double percent=0.05;
         double commision,rest;
-        if (withdrawal<0) return "Withdraw less null!";
+        if (withdrawal<0) return "Withdraw less 0!";
         commision=percent*withdrawal;
         return result(ownerName,withdrawal,commision);
     }
