@@ -4,6 +4,9 @@ public class HW22 {
     static String withdrawBalance(double balance,double withdrawal){
         double percent=0.05;
         double commision,rest;
+        if (balance<0 || withdrawal<0){
+            return "Balance or withdraw less null!";
+        }
         commision=percent*withdrawal;
         rest=balance-commision;
         if (balance>=commision+withdrawal){
