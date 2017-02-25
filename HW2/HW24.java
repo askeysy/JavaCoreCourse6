@@ -6,12 +6,15 @@ public class HW24 {
     static int[] balances = {1200, 250, 2000, 500, 3200};
     static String[] ownerNames = {"Jane", "Ann", "Jack", "Oww", "Lane"};
 
-    static String fundBalance(String ownerName,double fund){
+     static String fundBalance(String ownerName,double fund){
         double balance;
         int i=0;
         int isElement=0;
+        if (fund<0){
+            return "Fund less null!";
+        }
         while (i<ownerNames.length){
-            if (ownerNames[i]==ownerName){
+            if (ownerNames[i].equals(ownerName)){
                 isElement=1;
                 break;
             }
