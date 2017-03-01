@@ -70,27 +70,24 @@ public class User {
     }
 
     void withdraw(int summ){
-        int percent;
+        int commission;
         if (summ<1000){
-            percent=summ*5/100;
+            commission=summ*5/100;
         }
-        else percent = summ * 10 / 100;
-        if (summ+percent>balance){
+        else commission = summ * 10 / 100;
+        if (summ+commission>balance){
             System.out.println("Error! Balance less 0");
         }
         else {
-            balance-=percent;
+            balance-=summ+commission;
         }
     }
-    void companyNameLenght(){
-        User Worker=new User("Worker",15000,5,"IKEA",1000,"EUR");
-        int companyLength=Worker.getCompanyName().length();
+    int companyNameLenght(){
+        return this.companyName.length();
     }
-    void monthIncreaser(int addMonth){
-        User Worker=new User("Worker",15000,5,"IKEA",1000,"EUR");
-        int month=Worker.getMonthsOfEmployment();
-        Worker.setMonthsOfEmployment(month+addMonth);
+    int monthIncreaser(int addMonth){
+        int month=this.monthsOfEmployment;
+        return month+addMonth;
     }
-
 }
 
