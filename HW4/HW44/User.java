@@ -2,7 +2,7 @@ package HW4.HW44;
 
 import HW4.HW41.Bank;
 
-class User{
+public class User{
     long id;
     String name;
     double balance;
