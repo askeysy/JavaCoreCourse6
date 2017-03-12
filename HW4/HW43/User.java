@@ -1,8 +1,8 @@
-package HW4.HW44;
+package HW4.HW43;
 
 import HW4.HW41.Bank;
 
-public class User {
+public class User{
     long id;
     String name;
     double balance;
@@ -10,8 +10,8 @@ public class User {
     String companyName;
     int salary;
     Bank bank;
-    @Override
-    public String toString() {
-        return "";
+
+    public String ToString(String text){
+        return text;
     }
 }

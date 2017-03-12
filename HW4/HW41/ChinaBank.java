@@ -8,23 +8,49 @@ public class ChinaBank extends Bank {
         super(id, bankCountry, currency, numberOfEmployees, avrSalaryOfEmployee, rating, totalCapital);
     }
 
+    public Enum Currency;
+
     @Override
     public int getLimitOfWithdrawal() {
-        return 0;
+        switch(Currency.name()){
+            case "EUR": return 150;
+            case "USD": return 100;
+            default:
+                return -1;
+        }
     }
 
     @Override
     public int getLimitOfFunding() {
-        return 0;
+        switch(Currency.name()){
+            case "EUR": return 5000;
+            case "USD": return 10000;
+            default:
+                return -1;
+        }
     }
 
     @Override
     public int getMonthlyRate() {
-        return 0;
+        switch(Currency.name()){
+            case "EUR": return 0;
+            case "USD": return 1;
+            default:
+                return -1;
+        }
     }
 
     @Override
     public int getCommission(int summ) {
-        return 0;
+        switch(Currency.name()){
+            case "EUR":
+                if (summ<1000){ return 10;}
+                else{return 11;}
+            case "USD":
+                if (summ<1000){ return 3;}
+                else{return 5;}
+            default:
+                return -1;
+        }
     }
 }

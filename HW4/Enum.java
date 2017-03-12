@@ -1,5 +1,5 @@
 package HW4;
 
 enum Currency{
-    USD,EUR
+    USD,EUR;
 }
