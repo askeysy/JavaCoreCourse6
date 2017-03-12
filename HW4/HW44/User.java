@@ -11,7 +11,8 @@ public class User{
     int salary;
     Bank bank;
 
-    public String ToString(String text){
-        return text;
+    @Override
+    public String toString() {
+        return "";
     }
 }
