@@ -1,7 +1,7 @@
 package HW4.HW41;
 
 
-import java.util.Currency;
+import HW4.Currency;
 
 public abstract class  Bank {
     private long id;

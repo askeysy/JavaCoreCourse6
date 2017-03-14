@@ -1,5 +1,6 @@
 package HW4;
 
-enum Currency{
+public enum Currency{
     USD,EUR;
 }
+
