@@ -3,13 +3,13 @@ package HW4.HW44;
 import HW4.HW41.Bank;
 
 public class User{
-    long id;
-    String name;
-    double balance;
-    int monthsOfEmployment;
-    String companyName;
-    int salary;
-    Bank bank;
+    private long id;
+    private String name;
+    private double balance;
+    private int monthsOfEmployment;
+    private String companyName;
+    private int salary;
+    private Bank bank;
 
     public long getId() {
         return id;

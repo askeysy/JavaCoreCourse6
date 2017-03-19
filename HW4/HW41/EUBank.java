@@ -1,17 +1,17 @@
 package HW4.HW41;
 
 
-import java.util.Currency;
+import HW4.Currency;
 
 public class EUBank extends Bank {
     public EUBank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
         super(id, bankCountry, currency, numberOfEmployees, avrSalaryOfEmployee, rating, totalCapital);
     }
-    public Enum Currency;
+    String currencyBank=getCurrency().name();
 
     @Override
     public int getLimitOfWithdrawal() {
-        switch(Currency.name()){
+        switch(currencyBank){
             case "EUR": return 2200;
             case "USD": return 2000;
             default:
@@ -21,7 +21,7 @@ public class EUBank extends Bank {
 
     @Override
     public int getLimitOfFunding() {
-        switch(Currency.name()){
+        switch(currencyBank){
             case "EUR": return 20000;
             case "USD": return 10000;
             default:
@@ -31,7 +31,7 @@ public class EUBank extends Bank {
 
     @Override
     public int getMonthlyRate() {
-        switch(Currency.name()){
+        switch(currencyBank){
             case "EUR": return 1;
             case "USD": return 0;
             default:
@@ -41,7 +41,7 @@ public class EUBank extends Bank {
 
     @Override
     public int getCommission(int summ) {
-        switch(Currency.name()){
+        switch(currencyBank){
             case "EUR":
                 if (summ<1000){ return 2;}
                 else{return 4;}
