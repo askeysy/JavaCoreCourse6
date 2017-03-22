@@ -14,13 +14,14 @@ public class BankSystemImpl implements BankSystem{
     @Override
     public void withdrawOfUser(User user, int amount) {
         double result=user.getBalance()-amount;
+        user.setBalance(result);
     }
 
     @Override
     public void fundUser(User user, int amount) {
         double balance=user.getBalance();
         user.setBalance(balance+amount);
-    }
+      }
 
     @Override
     public void transferMoney(User fromUser, User toUser, int amount) {
