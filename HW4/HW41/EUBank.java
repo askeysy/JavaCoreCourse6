@@ -7,13 +7,12 @@ public class EUBank extends Bank {
     public EUBank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
         super(id, bankCountry, currency, numberOfEmployees, avrSalaryOfEmployee, rating, totalCapital);
     }
-    String currencyBank=getCurrency().name();
 
     @Override
     public int getLimitOfWithdrawal() {
-        switch(currencyBank){
-            case "EUR": return 2200;
-            case "USD": return 2000;
+        switch(getCurrency()){
+            case EUR: return 2200;
+            case USD: return 2000;
             default:
                 return -1;
         }
@@ -21,9 +20,9 @@ public class EUBank extends Bank {
 
     @Override
     public int getLimitOfFunding() {
-        switch(currencyBank){
-            case "EUR": return 20000;
-            case "USD": return 10000;
+        switch(getCurrency()){
+            case EUR: return 20000;
+            case USD: return 10000;
             default:
                 return -1;
         }
@@ -31,9 +30,9 @@ public class EUBank extends Bank {
 
     @Override
     public int getMonthlyRate() {
-        switch(currencyBank){
-            case "EUR": return 1;
-            case "USD": return 0;
+        switch(getCurrency()){
+            case EUR: return 1;
+            case USD: return 0;
             default:
                 return -1;
         }
@@ -41,11 +40,11 @@ public class EUBank extends Bank {
 
     @Override
     public int getCommission(int summ) {
-        switch(currencyBank){
-            case "EUR":
+        switch(getCurrency()){
+            case EUR:
                 if (summ<1000){ return 2;}
                 else{return 4;}
-            case "USD":
+            case USD:
                 if (summ<1000){ return 5;}
                 else{return 7;}
             default:

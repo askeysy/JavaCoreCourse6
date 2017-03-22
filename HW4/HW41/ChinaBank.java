@@ -9,13 +9,11 @@ public class ChinaBank extends Bank {
         super(id, bankCountry, currency, numberOfEmployees, avrSalaryOfEmployee, rating, totalCapital);
     }
 
-    String currencyBank=getCurrency().name();
-
     @Override
     public int getLimitOfWithdrawal() {
-        switch(currencyBank){
-            case "EUR": return 150;
-            case "USD": return 100;
+        switch(getCurrency()){
+            case EUR: return 150;
+            case USD: return 100;
             default:
                 return -1;
         }
@@ -23,9 +21,9 @@ public class ChinaBank extends Bank {
 
     @Override
     public int getLimitOfFunding() {
-        switch(currencyBank){
-            case "EUR": return 5000;
-            case "USD": return 10000;
+        switch(getCurrency()){
+            case EUR: return 5000;
+            case USD: return 10000;
             default:
                 return -1;
         }
@@ -33,9 +31,9 @@ public class ChinaBank extends Bank {
 
     @Override
     public int getMonthlyRate() {
-        switch(currencyBank){
-            case "EUR": return 0;
-            case "USD": return 1;
+        switch(getCurrency()){
+            case EUR: return 0;
+            case USD: return 1;
             default:
                 return -1;
         }
@@ -43,11 +41,11 @@ public class ChinaBank extends Bank {
 
     @Override
     public int getCommission(int summ) {
-        switch(currencyBank){
-            case "EUR":
+        switch(getCurrency()){
+            case EUR:
                 if (summ<1000){ return 10;}
                 else{return 11;}
-            case "USD":
+            case USD:
                 if (summ<1000){ return 3;}
                 else{return 5;}
             default:
