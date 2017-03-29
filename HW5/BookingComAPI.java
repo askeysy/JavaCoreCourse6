@@ -1,7 +1,7 @@
-package HW5.HW54;
+package HW5;
 
-import HW5.HW51.Room;
-import HW5.HW53.RoomAPI;
+import HW5.Room;
+import HW5.RoomAPI;
 
 private Room[] rooms;
 
