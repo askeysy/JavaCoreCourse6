@@ -1,9 +1,9 @@
 package HW5;
 
-public class BookingComAPI implements RoomAPI{
+public class TripAdvisorAPI implements RoomAPI {
     Room[] rooms;
 
-    public BookingComAPI(Room[] rooms) {
+    public TripAdvisorAPI(Room[] rooms) {
         this.rooms = rooms;
     }
 
@@ -12,4 +12,3 @@ public class BookingComAPI implements RoomAPI{
         return new Room[0];
     }
 }
-
