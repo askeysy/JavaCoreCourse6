@@ -7,6 +7,7 @@ public class BookingComAPI implements RoomAPI{
         this.rooms = rooms;
     }
 
+
     @Override
     public Room[] findRooms(int price, int persons, String city, String hotel) {
         return new Room[0];
