@@ -1,11 +1,7 @@
 package HW5;
 
-public class BookingComAPI implements RoomAPI{
-    Room[] rooms;
-
-    public BookingComAPI(Room[] rooms) {
-        this.rooms = rooms;
-    }
+public class BookingComAPI implements API{
+    public Room[] rooms;
 
 
     @Override
